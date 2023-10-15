@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Public_Sans } from "next/font/google";
 import localFont from "next/font/local";
+import Navbar from "./components/navbar";
 
 const public_sans = Public_Sans({
   subsets: ["latin"],

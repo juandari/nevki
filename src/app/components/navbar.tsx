@@ -2,15 +2,15 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <nav className="px-16 py-10 flex justify-between">
-      <h2>NV</h2>
+    <nav className="px-16 py-10 flex justify-between fixed z-50 w-full">
+      <h2 className="text-white font-bold text-4xl">NV</h2>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="w-6 h-6"
+        className="w-12 h-12 text-white"
       >
         <path
           strokeLinecap="round"
