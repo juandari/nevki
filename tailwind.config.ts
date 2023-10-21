@@ -41,6 +41,22 @@ const config: Config = {
           900: "#070707",
         },
       },
+      animation: {
+        "infinite-scroll-to-left":
+          "infinite-scroll-to-left 25s linear infinite",
+        "infinite-scroll-to-right":
+          "infinite-scroll-to-right 25s linear infinite",
+      },
+      keyframes: {
+        "infinite-scroll-to-left": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
+        "infinite-scroll-to-right": {
+          from: { transform: "translateX(-100%)" },
+          to: { transform: "translateX(0)" },
+        },
+      },
     },
   },
   plugins: [],

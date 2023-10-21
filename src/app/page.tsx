@@ -5,7 +5,7 @@ import Footer from "./components/footer";
 
 export default async function Home() {
   return (
-    <main>
+    <main className="bg-primary-500">
       <Navbar />
       <Hero />
       <About />
