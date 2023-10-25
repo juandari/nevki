@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
-import arrowIcon from "@/app/assets/arrow-right-top.svg";
-import imageSlider from "@/app/assets/image-slider-1.webp";
-import { getDictionary } from "../dictionaries";
+import arrowIcon from "@/assets/arrow-right-top.svg";
+import imageSlider from "@/assets/image-slider-1.webp";
+import { getDictionary } from "@/dictionaries";
 
 export default async function About() {
   const locale = await getDictionary("en");

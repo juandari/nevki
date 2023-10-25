@@ -1,16 +1,24 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 
 const Navbar = () => {
+  const pathname = usePathname();
+  const isAboutPage = pathname === "/about";
+
   const [isOpenNav, setIsOpenNav] = useState(false);
 
   return (
     <nav className="fixed z-40 w-full">
       <div className="inline-flex overflow-hidden flex-nowrap items-start translate-x-[-0]">
-        <div className="px-16 py-10 flex justify-between w-[100vw]">
-          <h2 className="text-white font-bold text-4xl">NV</h2>
+        <div
+          className={`${
+            isAboutPage ? "text-mineshaft" : "text-alabaster"
+          } px-16 py-10 flex justify-between w-[100vw]`}
+        >
+          <h2 className="font-bold text-4xl">NV</h2>
           <button onClick={() => setIsOpenNav(true)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -18,7 +26,9 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-12 h-12 text-alabaster transition-transform duration-300 hover:scale-110"
+              className={`w-12 h-12 ${
+                isAboutPage ? "text-mineshaft" : "text-alabaster"
+              } transition-transform duration-300 hover:scale-110`}
             >
               <path
                 strokeLinecap="round"
@@ -51,7 +61,7 @@ const Navbar = () => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-12 h-12 text-alabaster transition-transform duration-300 hover:scale-110"
+                  className={`w-12 h-12 text-alabaster transition-transform duration-300 hover:scale-110`}
                 >
                   <path
                     strokeLinecap="round"
@@ -65,7 +75,8 @@ const Navbar = () => {
             <ul className="flex flex-col gap-5 text-secondary-200 mt-40">
               <li>
                 <Link
-                  href="#"
+                  href="."
+                  onClick={() => setIsOpenNav(false)}
                   className="flex justify-between items-center hover:text-secondary-100"
                 >
                   <span className="text-2xl">01</span>
@@ -75,6 +86,7 @@ const Navbar = () => {
               <li>
                 <Link
                   href="#"
+                  onClick={() => setIsOpenNav(false)}
                   className="flex justify-between items-center hover:text-secondary-100"
                 >
                   <span className="text-2xl">02</span>
@@ -83,7 +95,8 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="about"
+                  onClick={() => setIsOpenNav(false)}
                   className="flex justify-between items-center hover:text-secondary-100"
                 >
                   <span className="text-2xl">03</span>
@@ -93,6 +106,7 @@ const Navbar = () => {
               <li>
                 <Link
                   href="#"
+                  onClick={() => setIsOpenNav(false)}
                   className="flex justify-between items-center hover:text-secondary-100"
                 >
                   <span className="text-2xl">04</span>

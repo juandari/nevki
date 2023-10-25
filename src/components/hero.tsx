@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import photo from "@/app/assets/photo.webp";
-import { getDictionary } from "@/app/dictionaries";
+import photo from "@/assets/photo.webp";
+import { getDictionary } from "@/dictionaries";
 
 export default async function Hero() {
   const locale = await getDictionary("en");
