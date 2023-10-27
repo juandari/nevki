@@ -7,16 +7,18 @@ import React, { useState } from "react";
 const Navbar = () => {
   const pathname = usePathname();
   const isAboutPage = pathname === "/about";
+  const isWorksPage = pathname === "/works";
+  const isBlackMenu = isAboutPage || isWorksPage;
 
   const [isOpenNav, setIsOpenNav] = useState(false);
 
   return (
-    <nav className="fixed z-40 w-full">
-      <div className="inline-flex overflow-hidden flex-nowrap items-start translate-x-[-0]">
+    <nav className="z-50 w-full">
+      <div>
         <div
           className={`${
-            isAboutPage ? "text-mineshaft" : "text-alabaster"
-          } px-16 py-10 flex justify-between w-[100vw]`}
+            isBlackMenu ? "text-mineshaft" : "text-alabaster"
+          } px-16 py-10 flex justify-between w-[100vw] fixed top-0 z-40`}
         >
           <h2 className="font-bold text-4xl">NV</h2>
           <button onClick={() => setIsOpenNav(true)}>
@@ -27,7 +29,7 @@ const Navbar = () => {
               strokeWidth={1.5}
               stroke="currentColor"
               className={`w-12 h-12 ${
-                isAboutPage ? "text-mineshaft" : "text-alabaster"
+                isBlackMenu ? "text-mineshaft" : "text-alabaster"
               } transition-transform duration-300 hover:scale-110`}
             >
               <path
@@ -40,8 +42,8 @@ const Navbar = () => {
         </div>
 
         <div
-          className={`w-[100vw] grid grid-cols-2 bg-slate-400 h-[100vh] transform transition-transform duration-300 ${
-            isOpenNav ? "translate-x-[-100%]" : ""
+          className={`w-[100vw] h-[100vh] fixed top-0 grid grid-cols-2 bg-slate-400 transition-all duration-300 z-50 ${
+            isOpenNav ? "ml-0" : "ml-[100%]"
           }`}
         >
           <div className="h-full bg-secondary-600 relative">
@@ -85,7 +87,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="works"
                   onClick={() => setIsOpenNav(false)}
                   className="flex justify-between items-center hover:text-secondary-100"
                 >
@@ -105,7 +107,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="contact"
                   onClick={() => setIsOpenNav(false)}
                   className="flex justify-between items-center hover:text-secondary-100"
                 >

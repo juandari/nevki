@@ -1,9 +1,11 @@
 import React from "react";
 import Image from "next/image";
 
-import arrowIcon from "@/assets/arrow-right-top.svg";
 import imageSlider from "@/assets/image-slider-1.webp";
+import arrowIcon from "@/assets/arrow-right-top.svg";
 import { getDictionary } from "@/dictionaries";
+import ButtonSeeMore from "./button-see-more";
+import ImageWithBorder from "./image-with-border";
 
 export default async function About() {
   const locale = await getDictionary("en");
@@ -26,33 +28,23 @@ export default async function About() {
       <div className="mt-32 w-full inline-flex flex-nowrap gap-6 overflow-hidden">
         <ul className="flex items-center justify-center gap-6 [&_img]:max-w-none animate-infinite-scroll-to-left">
           <li>
-            <div className="bg-secondary-100 p-6">
-              <Image alt="" src={imageSlider} />
-            </div>
+            <ImageWithBorder src={imageSlider} alt="product-showcase" />
             <p className="mt-4 text-xl">UI/UX Website Designer</p>
           </li>
           <li>
-            <div className="bg-secondary-100 p-6">
-              <Image alt="" src={imageSlider} />
-            </div>
+            <ImageWithBorder src={imageSlider} alt="product-showcase" />
             <p className="mt-4 text-xl">UI/UX Website Designer</p>
           </li>
           <li>
-            <div className="bg-secondary-100 p-6">
-              <Image alt="" src={imageSlider} />
-            </div>
+            <ImageWithBorder src={imageSlider} alt="product-showcase" />
             <p className="mt-4 text-xl">UI/UX Website Designer</p>
           </li>
           <li>
-            <div className="bg-secondary-100 p-6">
-              <Image alt="" src={imageSlider} />
-            </div>
+            <ImageWithBorder src={imageSlider} alt="product-showcase" />
             <p className="mt-4 text-xl">UI/UX Website Designer</p>
           </li>
           <li>
-            <div className="bg-secondary-100 p-6">
-              <Image alt="" src={imageSlider} />
-            </div>
+            <ImageWithBorder src={imageSlider} alt="product-showcase" />
             <p className="mt-4 text-xl">UI/UX Website Designer</p>
           </li>
         </ul>
@@ -61,33 +53,23 @@ export default async function About() {
           className="flex items-center justify-center gap-6 [&_img]:max-w-none animate-infinite-scroll-to-left"
         >
           <li>
-            <div className="bg-secondary-100 p-6">
-              <Image alt="" src={imageSlider} />
-            </div>
+            <ImageWithBorder src={imageSlider} alt="product-showcase" />
             <p className="mt-4 text-xl">UI/UX Website Designer</p>
           </li>
           <li>
-            <div className="bg-secondary-100 p-6">
-              <Image alt="" src={imageSlider} />
-            </div>
+            <ImageWithBorder src={imageSlider} alt="product-showcase" />
             <p className="mt-4 text-xl">UI/UX Website Designer</p>
           </li>
           <li>
-            <div className="bg-secondary-100 p-6">
-              <Image alt="" src={imageSlider} />
-            </div>
+            <ImageWithBorder src={imageSlider} alt="product-showcase" />
             <p className="mt-4 text-xl">UI/UX Website Designer</p>
           </li>
           <li>
-            <div className="bg-secondary-100 p-6">
-              <Image alt="" src={imageSlider} />
-            </div>
+            <ImageWithBorder src={imageSlider} alt="product-showcase" />
             <p className="mt-4 text-xl">UI/UX Website Designer</p>
           </li>
           <li>
-            <div className="bg-secondary-100 p-6">
-              <Image alt="" src={imageSlider} />
-            </div>
+            <ImageWithBorder src={imageSlider} alt="product-showcase" />
             <p className="mt-4 text-xl">UI/UX Website Designer</p>
           </li>
         </ul>
@@ -96,33 +78,23 @@ export default async function About() {
       <div className="mt-12 w-full inline-flex flex-nowrap gap-6 overflow-hidden">
         <ul className="flex items-center justify-center gap-6 [&_img]:max-w-none animate-infinite-scroll-to-right">
           <li>
-            <div className="bg-secondary-100 p-6">
-              <Image alt="" src={imageSlider} />
-            </div>
+            <ImageWithBorder src={imageSlider} alt="product-showcase" />
             <p className="mt-4 text-xl">UI/UX Website Designer</p>
           </li>
           <li>
-            <div className="bg-secondary-100 p-6">
-              <Image alt="" src={imageSlider} />
-            </div>
+            <ImageWithBorder src={imageSlider} alt="product-showcase" />
             <p className="mt-4 text-xl">UI/UX Website Designer</p>
           </li>
           <li>
-            <div className="bg-secondary-100 p-6">
-              <Image alt="" src={imageSlider} />
-            </div>
+            <ImageWithBorder src={imageSlider} alt="product-showcase" />
             <p className="mt-4 text-xl">UI/UX Website Designer</p>
           </li>
           <li>
-            <div className="bg-secondary-100 p-6">
-              <Image alt="" src={imageSlider} />
-            </div>
+            <ImageWithBorder src={imageSlider} alt="product-showcase" />
             <p className="mt-4 text-xl">UI/UX Website Designer</p>
           </li>
           <li>
-            <div className="bg-secondary-100 p-6">
-              <Image alt="" src={imageSlider} />
-            </div>
+            <ImageWithBorder src={imageSlider} alt="product-showcase" />
             <p className="mt-4 text-xl">UI/UX Website Designer</p>
           </li>
         </ul>
@@ -131,42 +103,29 @@ export default async function About() {
           className="flex items-center justify-center gap-6 [&_img]:max-w-none animate-infinite-scroll-to-right"
         >
           <li>
-            <div className="bg-secondary-100 p-6">
-              <Image alt="" src={imageSlider} />
-            </div>
+            <ImageWithBorder src={imageSlider} alt="product-showcase" />
             <p className="mt-4 text-xl">UI/UX Website Designer</p>
           </li>
           <li>
-            <div className="bg-secondary-100 p-6">
-              <Image alt="" src={imageSlider} />
-            </div>
+            <ImageWithBorder src={imageSlider} alt="product-showcase" />
             <p className="mt-4 text-xl">UI/UX Website Designer</p>
           </li>
           <li>
-            <div className="bg-secondary-100 p-6">
-              <Image alt="" src={imageSlider} />
-            </div>
+            <ImageWithBorder src={imageSlider} alt="product-showcase" />
             <p className="mt-4 text-xl">UI/UX Website Designer</p>
           </li>
           <li>
-            <div className="bg-secondary-100 p-6">
-              <Image alt="" src={imageSlider} />
-            </div>
+            <ImageWithBorder src={imageSlider} alt="product-showcase" />
             <p className="mt-4 text-xl">UI/UX Website Designer</p>
           </li>
           <li>
-            <div className="bg-secondary-100 p-6">
-              <Image alt="" src={imageSlider} />
-            </div>
+            <ImageWithBorder src={imageSlider} alt="product-showcase" />
             <p className="mt-4 text-xl">UI/UX Website Designers</p>
           </li>
         </ul>
       </div>
 
-      <button className="text-4xl flex items-center gap-2 font-medium mx-auto mt-20">
-        <span>SEE MORE</span>
-        <Image src={arrowIcon} alt="" className="w-12" />
-      </button>
+      <ButtonSeeMore />
     </section>
   );
 }

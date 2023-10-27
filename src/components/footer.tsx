@@ -30,11 +30,8 @@ export default async function Footer() {
         style={{ borderRadius: "0 0 50% 50%/0 0 100% 100%" }}
         className="bg-white h-[14em] w-full mt-[-1px]"
       ></div>
-      <section
-        aria-label="footer"
-        className="px-8 text-6xl pt-32 pb-20 relative"
-      >
-        <h3 className="font-normal font-make text-secondary-50 text-[435px] w-full text-center">
+      <section aria-label="footer" className="px-8 text-6xl pt-32 pb-20">
+        <h3 className="font-normal font-make text-secondary-50 text-[550px] w-full text-center">
           {locale["contact-button"]}
         </h3>
 
