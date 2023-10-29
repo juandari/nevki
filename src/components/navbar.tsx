@@ -8,7 +8,8 @@ const Navbar = () => {
   const pathname = usePathname();
   const isAboutPage = pathname === "/about";
   const isWorksPage = pathname === "/works";
-  const isBlackMenu = isAboutPage || isWorksPage;
+  const isContactPage = pathname === "/contact";
+  const isBlackMenu = isAboutPage || isWorksPage || isContactPage;
 
   const [isOpenNav, setIsOpenNav] = useState(false);
 
@@ -20,7 +21,9 @@ const Navbar = () => {
             isBlackMenu ? "text-mineshaft" : "text-alabaster"
           } px-16 py-10 flex justify-between w-[100vw] fixed top-0 z-40`}
         >
-          <h2 className="font-bold text-4xl">NV</h2>
+          <Link href="/">
+            <h2 className="font-bold text-4xl">NV</h2>
+          </Link>
           <button onClick={() => setIsOpenNav(true)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +80,7 @@ const Navbar = () => {
             <ul className="flex flex-col gap-5 text-secondary-200 mt-40">
               <li>
                 <Link
-                  href="."
+                  href="/"
                   onClick={() => setIsOpenNav(false)}
                   className="flex justify-between items-center hover:text-secondary-100"
                 >
@@ -87,7 +90,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href="works"
+                  href="/works"
                   onClick={() => setIsOpenNav(false)}
                   className="flex justify-between items-center hover:text-secondary-100"
                 >
@@ -97,7 +100,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href="about"
+                  href="/about"
                   onClick={() => setIsOpenNav(false)}
                   className="flex justify-between items-center hover:text-secondary-100"
                 >
@@ -107,7 +110,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href="contact"
+                  href="/contact"
                   onClick={() => setIsOpenNav(false)}
                   className="flex justify-between items-center hover:text-secondary-100"
                 >

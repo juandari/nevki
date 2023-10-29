@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
 
-import { getDictionary } from "../dictionaries";
+import { usePathname } from "next/navigation";
 
 const SOCIAL_MEDIAS = [
   {
@@ -21,18 +23,22 @@ const SOCIAL_MEDIAS = [
   },
 ];
 
-export default async function Footer() {
-  const locale = await getDictionary("en");
+export default function Footer() {
+  const pathname = usePathname();
+  const isWordDetailPage =
+    pathname.includes("/works") && pathname.split("/").length > 2;
 
   return (
     <>
       <div
         style={{ borderRadius: "0 0 50% 50%/0 0 100% 100%" }}
-        className="bg-white h-[14em] w-full mt-[-1px]"
+        className={`${
+          isWordDetailPage ? "bg-secondary-700" : "bg-white"
+        } h-[14em] w-full mt-[-1px]`}
       ></div>
       <section aria-label="footer" className="px-8 text-6xl pt-32 pb-20">
         <h3 className="font-normal font-make text-secondary-50 text-[550px] w-full text-center">
-          {locale["contact-button"]}
+          GET IN TOUCH
         </h3>
 
         <ul>
