@@ -31,21 +31,25 @@ export default function WorksPage() {
       </div>
       <Divider />
       <div className="my-14">
-        <Product
-          src={imageSlider}
-          alt="product-showcase"
-          title="UI/UX Website Designer"
-          year="2023"
-        />
+        <Link href="/works/branding-makestudio">
+          <Product
+            src={imageSlider}
+            alt="product-showcase"
+            title="UI/UX Website Designer"
+            year="2023"
+          />
+        </Link>
       </div>
       <Divider />
       <div className="my-14">
-        <Product
-          src={imageSlider}
-          alt="product-showcase"
-          title="UI/UX Website Designer"
-          year="2023"
-        />
+        <Link href="/works/branding-makestudio">
+          <Product
+            src={imageSlider}
+            alt="product-showcase"
+            title="UI/UX Website Designer"
+            year="2023"
+          />
+        </Link>
       </div>
       <Divider />
 
